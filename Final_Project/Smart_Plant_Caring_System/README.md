@@ -30,3 +30,101 @@ Moisture, humidity, and temperature sensor
 Water pump
 9V power supply
 Plants
+
+## Codes
+#### humidity_temp.py
+``` import os
+import json
+import time
+import board
+import adafruit_dht
+
+# Initialize the DHT device with data pin connected to GPIO pin 17 (change if necessary)
+dhtDevice = adafruit_dht.DHT22(board.D17, use_pulseio=False)
+
+# Create the folder to store JSON data if it doesn't exist
+data_folder = "JSON_Humidity_Temperature_data"
+os.makedirs(data_folder, exist_ok=True)
+
+# File to store the sensor data
+filename = f"{data_folder}/sensor_data.txt"
+
+while True:
+    try:
+        # Read the humidity and temperature values from the sensor
+        temperature_c = dhtDevice.temperature
+        temperature_f = temperature_c * (9 / 5) + 32
+        humidity = dhtDevice.humidity
+
+        print(
+            "Temp: {:.1f} F / {:.1f} C    Humidity: {}% ".format(
+                temperature_f, temperature_c, humidity
+            )
+        )
+
+        # Create a dictionary with the sensor data
+        sensor_data = {
+            "timestamp": str(time.time()),
+            "temperature_c": temperature_c,
+            "temperature_f": temperature_f,
+            "humidity": humidity
+        }
+            # Append the new data to the file
+        with open(filename, "a") as file:
+            file.write(json.dumps(sensor_data) + "\n")
+
+    except RuntimeError as error:
+        # Errors happen fairly often, DHT sensors can be hard to read, just keep going
+        print(error.args[0])
+        time.sleep(2.0)
+        continue
+
+    time.sleep(2.0)
+```
+#### Moisture_sensor.py
+``` 
+# Create an empty list to store pump status data
+pump_status_list = []
+
+# Initialize the pump status
+pump_status = "off"
+
+while True:
+    moisture_level = moisture_sensor.value * 100
+    print(f"Moisture level: {moisture_level:.2f}%")
+
+    if moisture_level < moisture_threshold:
+        #print('Moisture level is low. Watering the plant...')
+        print('Moisture level is sufficient.')
+        water_pump.on()  # Turn on the water pump
+        pump_status = "on"
+        time.sleep(5)  # Run the water pump for 5 seconds
+        water_pump.off()  # Turn off the water pump
+        print('Watering complete.')
+    else:
+        #print('Moisture level is sufficient.')
+        print('Moisture level is low. Watering the plant...')
+        pump_status = "off"
+
+    # Get the current timestamp
+    current_time = str(datetime.now())
+
+    # Create a dictionary with the pump status data
+    pump_status_data = {
+        "time": current_time,
+        "status": pump_status
+    }
+
+    # Append the pump status data to the list
+    pump_status_list.append(pump_status_data)
+
+    # Generate a filename for the JSON file
+    filename = f"{data_folder}/pump_status.json"
+
+    # Save all pump status data to a JSON file in column and row format
+    with open(filename, "w") as file:
+        json.dump(pump_status_list, file, indent=4)
+
+    time.sleep(2)
+    ```
+
