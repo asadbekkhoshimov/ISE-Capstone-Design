@@ -129,9 +129,9 @@ while True:
     time.sleep(2)
     ```
  ## Images: 
- ![image1](https://github.com/asadbekkhoshimov/ISE-Capstone-Design/assets/84382619/c16126e8-bc62-4706-8f7c-53693058a5f4)
-![image2](https://github.com/asadbekkhoshimov/ISE-Capstone-Design/assets/84382619/0f24b47e-bb58-46b1-bcd1-0c34126e4baa)
-![image3](https://github.com/asadbekkhoshimov/ISE-Capstone-Design/assets/84382619/a5480fb5-276c-41eb-993b-3a42d3325c30)
+![image1](https://github.com/asadbekkhoshimov/ISE-Capstone-Design/assets/84382619/689adbbb-a044-41e8-a731-9e64aba5dd76)
+![image2](https://github.com/asadbekkhoshimov/ISE-Capstone-Design/assets/84382619/9d22807d-bbf4-4fbf-b586-cd6797079abe)
+![image3](https://github.com/asadbekkhoshimov/ISE-Capstone-Design/assets/84382619/dd613785-8de0-4fa1-8348-94a008335efc)
 
 ## Video: 
 
