@@ -1,4 +1,4 @@
-# Smart Plant Caring System
+# Smart Plant Caring System (Team_#6)
 The Smart Plant Caring System is an advanced automation solution for indoor gardening and plant care, leveraging Raspberry Pi 3 and a variety of sensors.
 
 ## Overview
