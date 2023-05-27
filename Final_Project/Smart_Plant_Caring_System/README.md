@@ -5,7 +5,9 @@ The Smart Plant Caring System is an advanced automation solution for indoor gard
 https://youtu.be/Smel22U0VKo
 ## Images:
 ![image1](https://github.com/asadbekkhoshimov/ISE-Capstone-Design/assets/84382619/98283b64-5a0a-4ca2-ad7b-a59791420942)
+
 ![image2](https://github.com/asadbekkhoshimov/ISE-Capstone-Design/assets/84382619/7eb9b5d3-5693-432a-8098-f35a84072630)
+
 ![image3](https://github.com/asadbekkhoshimov/ISE-Capstone-Design/assets/84382619/11e5ba6b-749c-435a-b94f-fac611f4f979)
 
 ## Overview
