@@ -1,6 +1,12 @@
 
 # Smart Plant Caring System (Team_#6)
 The Smart Plant Caring System is an advanced automation solution for indoor gardening and plant care, leveraging Raspberry Pi 3 and a variety of sensors.
+## Video:
+https://youtu.be/Smel22U0VKo
+## Images:
+![image1](https://github.com/asadbekkhoshimov/ISE-Capstone-Design/assets/84382619/98283b64-5a0a-4ca2-ad7b-a59791420942)
+![image2](https://github.com/asadbekkhoshimov/ISE-Capstone-Design/assets/84382619/7eb9b5d3-5693-432a-8098-f35a84072630)
+![image3](https://github.com/asadbekkhoshimov/ISE-Capstone-Design/assets/84382619/11e5ba6b-749c-435a-b94f-fac611f4f979)
 
 ## Overview
 This system is designed to monitor and manage the environmental conditions essential for plant growth, such as moisture, humidity, and temperature. One of its smart features is the ability to intelligently irrigate your plants based on real-time moisture level data. Furthermore, it includes a webcam for people detection, distinguishing authorized from unauthorized individuals. All sensor data is stored in a JSON file, which can be uploaded to the cloud and accessed for further usage.
@@ -130,6 +136,6 @@ while True:
     time.sleep(2)
     
     ```
-    
+ 
 
 
