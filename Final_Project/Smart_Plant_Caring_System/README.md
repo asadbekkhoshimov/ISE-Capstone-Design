@@ -34,7 +34,8 @@ Plants
 
 ## Codes
 #### humidity_temp.py
-``` import os
+``` 
+import os
 import json
 import time
 import board
@@ -127,14 +128,8 @@ while True:
         json.dump(pump_status_list, file, indent=4)
 
     time.sleep(2)
+    
     ```
- ## Images: 
-![image1](https://github.com/asadbekkhoshimov/ISE-Capstone-Design/assets/84382619/689adbbb-a044-41e8-a731-9e64aba5dd76)
-![image2](https://github.com/asadbekkhoshimov/ISE-Capstone-Design/assets/84382619/9d22807d-bbf4-4fbf-b586-cd6797079abe)
-![image3](https://github.com/asadbekkhoshimov/ISE-Capstone-Design/assets/84382619/dd613785-8de0-4fa1-8348-94a008335efc)
-
-## Video: 
-
-https://youtu.be/Smel22U0VKo
+    
 
 
